@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap');
+
 /* Source: https://www.joshwcomeau.com/css/custom-css-reset */
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -37,3 +40,115 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
+
+/**********************************************************/
+
+html {
+  --fz-xxl: 128px;
+  --fz-xl: 48px;
+  --fz-m: 36px;
+  --fz-s: 24px;
+  --primary: #000000;
+  --accent: #999999;
+
+  font-family: 'Amatic SC', cursive;
+  font-weight: normal;
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--fz-xxl);
+  font-weight: inherit;
+  margin: 50px 0 80px;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--fz-xl);
+  font-weight: inherit;
+}
+
+p, a, span, div, ul {
+  font-size: var(--fz-m);
+}
+
+pre {
+  font-size: 25px;
+  font-family: 'Spline Sans Mono', monospace;
+}
+
+ul li::marker {
+  font-size: 0.6em;
+}
+
+/* Layout */
+
+body {
+  display: grid;
+  grid-template-rows: auto auto minmax(300px, 1fr);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main */
+
+main .wrapper {
+  display: flex;
+  gap: 100px;
+}
+
+main .wrapper > :nth-child(1) {
+  flex-shrink: 0;
+}
+
+main section {
+  margin-bottom: 25px;
+}
+main section h2 {
+  margin-bottom: 5px;
+}
+
+img.avatar {
+  text-align: center;
+  width: 250px;
+  height: 250px;
+}
+
+/* Footer */
+
+footer {
+  margin-bottom: 30px;
+  display: grid;
+  align-items: end;
+}
+
+nav {
+  font-size: var(--fz-s);
+}
+
+footer .wrapper {
+  width: 100%;
+  max-width: 1560px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.sources ul {
+  gap: 40px;
+}
+
